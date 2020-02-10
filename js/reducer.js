@@ -11,3 +11,19 @@ let state = {count: 0}
 let action = {type: 'INCREASE_COUNT'}
 
 changeState(state, action)
+
+function dispach(action){
+  state = changeState(state, action)
+  return state
+}
+
+dispach({type: 'INCREASE_COUNT'})
+dispach({type: 'INCREASE_COUNT'})
+dispach({type: 'INCREASE_COUNT'})
+dispach({type: 'INCREASE_COUNT'})
+
+function render(){
+  document.body.textContent = state.count
+}
+render()
+
